@@ -1,0 +1,33 @@
+{
+  "name": "is-ready",
+  "version": "0.0.0",
+  "description": "WIP",
+  "repository": "lukeed/is-ready",
+  "umd:main": "dist/is-ready.min.js",
+  "module": "dist/is-ready.es.js",
+  "main": "dist/is-ready.js",
+  "license": "MIT",
+  "author": {
+    "name": "Luke Edwards",
+    "email": "luke.edwards05@gmail.com",
+    "url": "lukeed.com"
+  },
+  "engines": {
+    "node": ">=4"
+  },
+  "scripts": {
+    "build": "node builder"
+  },
+  "files": [
+    "dist"
+  ],
+  "keywords": [],
+  "devDependencies": {
+    "gzip-size": "^3.0.0",
+    "pretty-bytes": "^4.0.2",
+    "rollup": "^0.45.2",
+    "rollup-plugin-buble": "^0.15.0",
+    "rollup-plugin-node-resolve": "^3.0.0",
+    "uglify-js": "^3.2.0"
+  }
+}
