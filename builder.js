@@ -8,8 +8,7 @@ const pkg = require('./package');
 const umd = pkg['umd:main'];
 
 rollup({
-	useStrict: false,
-	entry: 'src/index.js',
+	input: 'src/index.js',
 	plugins: [
 		require('rollup-plugin-node-resolve')(),
 		require('rollup-plugin-buble')({
@@ -19,21 +18,21 @@ rollup({
 }).then(bun => {
 	bun.write({
 		format: 'cjs',
-		dest: pkg.main,
+		file: pkg.main,
 		exports: 'default'
 	});
 
 	bun.write({
 		format: 'es',
-		dest: pkg.module,
+		file: pkg.module,
 		exports: 'default'
 	});
 
 	bun.write({
-		dest:umd,
+		file: umd,
 		format: 'umd',
-		exports: 'default',
-		moduleName: pkg.name
+		name: pkg.name,
+		exports: 'default'
 	}).then(_ => {
 		const data = fs.readFileSync(umd, 'utf8');
 
