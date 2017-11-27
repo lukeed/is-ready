@@ -22,6 +22,9 @@
     "dist"
   ],
   "keywords": [],
+  "dependencies": {
+    "dlv": "^1.1.0"
+  },
   "devDependencies": {
     "gzip-size": "^3.0.0",
     "pretty-bytes": "^4.0.2",

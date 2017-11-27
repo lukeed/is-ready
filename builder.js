@@ -9,8 +9,11 @@ const umd = pkg['umd:main'];
 
 rollup({
 	input: 'src/index.js',
+	external: ['dlv'],
 	plugins: [
-		require('rollup-plugin-node-resolve')(),
+		require('rollup-plugin-node-resolve')({
+			jsnext: true
+		}),
 		require('rollup-plugin-buble')({
 			transform: { module:false }
 		}),
@@ -19,20 +22,23 @@ rollup({
 	bun.write({
 		format: 'cjs',
 		file: pkg.main,
-		exports: 'default'
+		exports: 'default',
+		interop: false
 	});
 
 	bun.write({
 		format: 'es',
 		file: pkg.module,
-		exports: 'default'
+		exports: 'default',
+		interop: false
 	});
 
 	bun.write({
 		file: umd,
 		format: 'umd',
 		name: pkg.name,
-		exports: 'default'
+		exports: 'default',
+		interop: false
 	}).then(_ => {
 		const data = fs.readFileSync(umd, 'utf8');
 
