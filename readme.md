@@ -1,4 +1,4 @@
-# is-ready
+# is-ready [![Build Status](https://travis-ci.org/lukeed/is-ready.svg?branch=master)](https://travis-ci.org/lukeed/is-ready)
 
 > A tiny (309B) library to detect when `window` globals are defined and ready to use~!
 
