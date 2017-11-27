@@ -1,6 +1,6 @@
 {
   "name": "is-ready",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "description": "A tiny (309B) library to detect when `window` globals are defined and ready to use~!",
   "repository": "lukeed/is-ready",
   "umd:main": "dist/is-ready.min.js",
