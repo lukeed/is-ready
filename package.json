@@ -1,7 +1,7 @@
 {
   "name": "is-ready",
   "version": "0.0.0",
-  "description": "WIP",
+  "description": "A tiny (309B) library to detect when `window` globals are defined and ready to use~!",
   "repository": "lukeed/is-ready",
   "umd:main": "dist/is-ready.min.js",
   "module": "dist/is-ready.es.js",
@@ -21,7 +21,19 @@
   "files": [
     "dist"
   ],
-  "keywords": [],
+  "keywords": [
+    "dependencies",
+    "dependency",
+    "is-ready",
+    "browser",
+    "globals",
+    "global",
+    "window",
+    "loaded",
+    "async",
+    "ready",
+    "cdn"
+  ],
   "dependencies": {
     "dlv": "^1.1.0"
   },
